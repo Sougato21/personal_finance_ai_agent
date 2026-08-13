@@ -1,12 +1,12 @@
-# Personal Finance AI Agent
+# 💰 Personal Finance AI Agent
 
-An interactive, production-ready, and modular **Personal Finance AI Agent** built using **Python, Pandas, Matplotlib, Streamlit, LangChain, and Google Gemini API**. 
+An interactive, production-ready, and modular **Personal Finance AI Agent** built using **Python, Pandas, Matplotlib, Streamlit, LangChain, and Google Gemini API**.
 
 This application allows users to upload their transaction history (CSV), auto-categorize transactions using robust keywords and AI, manage monthly budgets, analyze spending trends, predict future expenses, and chat with a specialized **LangChain AI Financial Advisor** powered by **Google Gemini API**.
 
 ---
 
-## Key Features
+## ✨ Key Features
 
 * **Data Ingestion & Cleaning**: Automatically recognizes, validates, and cleans columns (Date, Description, Amount) from any generic bank CSV.
 * **Auto-Categorization**: Instantly labels transactions (Food & Dining, Transport, Shopping, Bills & Utilities, Entertainment, Healthcare, Education, Income) using rule-based parsing, with the option to manually edit categories dynamically.
@@ -19,50 +19,123 @@ This application allows users to upload their transaction history (CSV), auto-ca
 
 ---
 
-## Project Structure
+## 🛠️ Project Structure
 
 ```text
-├── app.py                  # Streamlit Web App UI, layout tabs, state management
-├── preprocess.py           # Ingestion, validation, cleaning, auto-categorization
-├── agent.py                # LangChain Gemini LLM client, financial prompts, predictions
-├── utils.py                # Plotting, PDF export layout, mock CSV generator
-├── requirements.txt        # Package dependencies
-├── .env.example            # Environment variables configuration template
-└── README.md               # Setup and usage instructions
+Personal-Finance-AI-Agent/
+│
+├── 📄 app.py
+│   └── Streamlit Web App UI, dashboard layout & state management
+│
+├── ⚙️ preprocess.py
+│   └── Data ingestion, validation, cleaning & auto-categorization
+│
+├── 🤖 agent.py
+│   └── LangChain Gemini LLM client, financial prompts & AI predictions
+│
+├── 📊 utils.py
+│   └── Data visualization, PDF report generation & mock CSV generator
+│
+├── 📦 requirements.txt
+│   └── Required Python package dependencies
+│
+├── 🔐 .env.example
+│   └── Environment variable configuration template
+│
+└── 📖 README.md
+    └── Project documentation & setup instructions
 ```
 
 ---
 
-## Setup Guide
+## 💻 Technology Stack
+
+| Technology              | Purpose                                                        |
+| ----------------------- | -------------------------------------------------------------- |
+| 🐍 **Python**           | Core programming language and application logic                |
+| 🐼 **Pandas**           | Data loading, cleaning, processing and financial analysis      |
+| 🔢 **NumPy**            | Numerical operations and statistical calculations              |
+| 📈 **Seaborn**          | Data visualization and analytical charts                       |
+| 📊 **Matplotlib**       | Financial dashboards and visual reports                        |
+| 🎨 **Streamlit**        | Interactive web application and dashboard                      |
+| 🔗 **LangChain**        | AI agent framework, prompt handling and conversational context |
+| ✨ **Google Gemini API** | AI-powered financial advice, analysis and insights             |
+
+---
+
+## 🚀 Setup Guide
 
 ### 1. Prerequisites
+
 Ensure you have **Python 3.9 to 3.12** installed on your system.
 
 ### 2. Create a Virtual Environment
+
 ```bash
 python -m venv venv
-source venv/bin/activate  # macOS/Linux
-# or .\venv\Scripts\Activate.ps1 on Windows
+```
+
+**macOS/Linux:**
+
+```bash
+source venv/bin/activate
+```
+
+**Windows PowerShell:**
+
+```powershell
+.\venv\Scripts\Activate.ps1
 ```
 
 ### 3. Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 4. Setup Environment Variables
+
 Duplicate `.env.example` to `.env`:
+
 ```bash
 cp .env.example .env
 ```
+
 Provide your `GOOGLE_API_KEY` in `.env` or input it in the Streamlit sidebar text field.
 
 ---
 
-## Running the Application
+## ▶️ Running the Application
 
 Launch the Streamlit dashboard:
+
 ```bash
 streamlit run app.py
 ```
+
 This will start the local server and open the application in your browser (typically at `http://localhost:8501`).
+
+---
+
+## 🔄 How It Works
+
+The Personal Finance AI Agent follows a simple workflow to turn raw transaction data into meaningful financial insights:
+
+### 1. 📂 Upload a Finance Dataset
+Upload your personal finance or bank transaction history in **CSV format** through the Streamlit interface.
+
+### 2. 🔍 Automatic Detection & Categorization
+The system automatically detects and validates the important columns in your dataset and categorizes transactions into relevant financial categories.
+
+### 3. 📊 Get Financial Reports & Analysis
+Once your data is processed, the dashboard provides financial reports and visual analysis.
+
+### 4. 💬 Ask Questions to the AI Agent
+Use the integrated **LangChain + Google Gemini AI Financial Advisor** to ask questions about your finances.
+
+### 5. 🧠 Get AI-Powered Financial Insights
+The AI agent analyzes your processed financial data and provides personalized insights
+
+
+---
+Made with using **Python, Streamlit, LangChain & Google Gemini**   
